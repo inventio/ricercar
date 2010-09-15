@@ -1,22 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
-# If you are deploying to Heroku and MongoHQ,
-# you supply connection information here.
-require 'uri'
-if ENV['MONGOHQ_URL']
-  mongo_uri = URI.parse(ENV['MONGOHQ_URL'])
-  ENV['MONGOID_HOST'] = mongo_uri.host
-  ENV['MONGOID_PORT'] = mongo_uri.port.to_s
-  ENV['MONGOID_USERNAME'] = mongo_uri.user
-  ENV['MONGOID_PASSWORD'] = mongo_uri.password
-  ENV['MONGOID_DATABASE'] = mongo_uri.path.gsub('/', '')
-end
-
-require 'mongoid/railtie'
-require 'action_controller/railtie'
-require 'action_mailer/railtie'
-require 'active_resource/railtie'
-require 'rails/test_unit/railtie'
+require 'rails/all'
 
 
 # If you have a Gemfile, require the gems listed there, including any gems
@@ -51,7 +35,6 @@ module Ricercar
     # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
 
     config.generators do |g|
-      g.orm             :mongoid
       g.template_engine :haml
     end
     
