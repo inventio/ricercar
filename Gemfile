@@ -5,7 +5,7 @@ gem 'rails', '3.0.0'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-# gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -35,12 +35,6 @@ gem "haml", "3.0.18"
 gem "rails3-generators", "0.13.0", :group => :development
 gem "hpricot", "0.8.2", :group => :development
 gem "ruby_parser", "2.0.5", :group => :development
-
-# Bundle gems needed for Mongoid
-
-# waiting for Mongoid 2 beta 18 -- use this patched version for now:
-gem "mongoid", :git => "git://github.com/cherring/mongoid.git"
-gem "bson_ext", "1.0.7"
 
 # Bundle gem needed for Devise
 gem "devise", "1.1.2"
