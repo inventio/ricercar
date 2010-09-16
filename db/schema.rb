@@ -10,7 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100915234021) do
+ActiveRecord::Schema.define(:version => 20100916054604) do
+
+  create_table "scores", :force => true do |t|
+    t.string   "title"
+    t.datetime "added"
+    t.boolean  "private"
+    t.integer  "user_id"
+    t.string   "sample_file_name"
+    t.string   "sample_content_type"
+    t.integer  "sample_file_size"
+    t.datetime "sample_updated_at"
+    t.string   "repo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
