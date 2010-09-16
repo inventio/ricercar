@@ -1,5 +1,13 @@
 require File.expand_path('../boot', __FILE__)
 
+
+#Create the repositories folder and add it to the environment
+repos = '/ricercar/repositories'
+puts "WARNING: #{repos} does not exist, git related operations will fail. 
+      Run create it and run `chown #{ENV['USER']} #{repos}`" unless File.directory? repos 
+
+ENV['GIT_REPOS'] = repos 
+
 require 'rails/all'
 
 
