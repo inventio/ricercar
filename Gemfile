@@ -45,3 +45,5 @@ gem 'formtastic', '~> 1.1.0'
 #Bundle paperclip
 gem 'paperclip', '~> 2.3.3'
 
+#Bundle grit
+gem 'grit', '~> 2.2.0'
