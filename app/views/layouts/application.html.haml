@@ -1,15 +1,18 @@
 !!!
 %html
   %head
-    %title Testapp
+    %title= title
     = stylesheet_link_tag :all
     = javascript_include_tag :all 
     
     = csrf_meta_tag
   %body
-    %ul.hmenu
-      = render 'devise/menu/registration_items'
-      = render 'devise/menu/login_items'
-    %p{:style => "color: green"}= notice
-    %p{:style => "color: red"}= alert
-    = yield
+    #header
+      %a#branding{:href=>"/", :title=>"Ricercar"} Ricercar
+      %ul.hmenu
+        = render 'devise/menu/registration_items'
+        = render 'devise/menu/login_items'
+    %p.flash.notice= notice
+    %p.flash.alert= alert
+    #content
+      = yield
