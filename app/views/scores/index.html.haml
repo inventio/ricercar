@@ -1,0 +1,22 @@
+%h1= t('.title')
+%p= link_to t('.new_score'), new_score_path
+
+%table
+  %thead
+    %tr
+      %th= Score.human_attribute_name :title
+      %th= Score.human_attribute_name :added
+      %th= Score.human_attribute_name :private
+      %th= Score.human_attribute_name :author
+      %th{:colspan => 3}= t 'actions'
+  
+  %tbody
+    - for score in @scores
+      %tr{ :class => cycle(:odd, :even) }
+        %td= score.title
+        %td= score.added
+        %td= score.private
+        %td= score.author
+        %td.action= link_to t('show'), score
+        %td.action= link_to t('edit'), edit_score_path(score)
+        %td.action= link_to t('destroy'), score, :confirm => t('are_you_sure'), :method => :delete
