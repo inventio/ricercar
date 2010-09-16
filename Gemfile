@@ -38,3 +38,10 @@ gem "ruby_parser", "2.0.5", :group => :development
 
 # Bundle gem needed for Devise
 gem "devise", "1.1.2"
+
+#Bundle formtastic
+gem 'formtastic', '~> 1.1.0'
+
+#Bundle paperclip
+gem 'paperclip', '~> 2.3.3'
+
