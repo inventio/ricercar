@@ -2,6 +2,7 @@
 
 Luego de clonar el repo, correr la app debería ser tan fácil como correr
     sudo bundle install
+    rake db:migrate
     rake db:seed
     rails server
     
