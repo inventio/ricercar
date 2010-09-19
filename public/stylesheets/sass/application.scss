@@ -43,6 +43,12 @@ ul.hmenu {
 ul.hmenu li {
   display: inline;  
 }
+/*required for autogrowing textareas*/
+textarea {
+    overflow: hidden !important;
+    height: auto !important ;
+    width: 600px;
+}
 
 /*Proprietary definitions*/
 /*based on this scheme: http://www.colourlovers.com/palette/336075/beethoven*/

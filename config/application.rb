@@ -40,7 +40,10 @@ module Ricercar
     # config.i18n.default_locale = :de
 
     # JavaScript files you want as :defaults (application.js is always included).
-    config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
+    config.action_view.javascript_expansions[:defaults] = %w(jquery rails jquery.autogrowtextarea)
+    #config.action_view.javascript_expansions[:tab_utils] =%w(jquery.autogrow vexflow tabdiv)
+    #config.action_view.javascript_expansions[:score_utils] =%w(jquery.autogrow abc_editor-min)
+
 
     config.generators do |g|
       g.template_engine :haml
