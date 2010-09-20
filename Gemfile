@@ -46,4 +46,5 @@ gem 'formtastic', '~> 1.1.0'
 gem 'paperclip', '~> 2.3.3'
 
 #Bundle grit
-gem 'grit', '~> 2.2.0'
+#gem 'grit', '~> 2.2.0'
+gem 'grit', :path => "#{File.expand_path(__FILE__)}/../vendor/grit"
