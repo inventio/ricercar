@@ -2,7 +2,7 @@ class CreateScores < ActiveRecord::Migration
   def self.up
     create_table :scores do |t|
       t.string :title
-      t.datetime :added
+      t.datetime :added #actually, this is the last modified timestamp...
       t.boolean :private
       t.references :user
       #for file attachments

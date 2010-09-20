@@ -4,6 +4,7 @@
 class Score < ActiveRecord::Base
   belongs_to :user
   before_save :set_defaults
+  validates_presence_of :title
 
   has_attached_file :sample, :url=>"#{ENV['GIT_REPOS']}/:id/attachments/:filename"
   #according to http://filext.com/file-extension/<mp3|ogg|wav>
@@ -16,10 +17,11 @@ class Score < ActiveRecord::Base
   :message=>"Only mp3, wav and ogg audio files are supported"
   }
   validates_attachment_size :sample, {:less_than=>5.megabyte}
+
   #put a default date and author
   def set_defaults
     self.user = current_user
-    self.added = DateTime.now
+    self.added = DateTime.now #this is actually the last time added... (last revision date)
     self.private = false unless self.private
   end
 end

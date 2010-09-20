@@ -14,7 +14,9 @@ class ScoresController < ApplicationController
   # GET /scores/1.xml
   def show
     @score = Score.find(params[:id])
-
+    repo = Grit::Repo.new(@score.repo)
+    @commits = repo.commits #gets the latest 10 commits
+    @content = repo.commits.first.tree.contents.first.data
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @score }
@@ -44,6 +46,10 @@ class ScoresController < ApplicationController
 
     respond_to do |format|
       if @score.save
+        #create the git repo
+        repo = Grit::Repo.init("#{ENV["GIT_REPOS"]}/#{@score.id}")
+        repo.index.add(@score.title, params[:content])
+        repo.index.commit("first commit", [], Grit::Actor.new(current_user.email.split("@"), current_user.email))
         format.html { redirect_to(@score, :notice => 'Score was successfully created.') }
         format.xml  { render :xml => @score, :status => :created, :location => @score }
       else
