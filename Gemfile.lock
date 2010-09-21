@@ -1,11 +1,26 @@
+GIT
+  remote: git://github.com/cherring/mongoid.git
+  revision: d6b23c2
+  specs:
+    mongoid (2.0.0.beta.16)
+      activemodel (~> 3.0.0)
+      bson (= 1.0.7)
+      mongo (= 1.0.7)
+      tzinfo (~> 0.3.22)
+      will_paginate (~> 3.0.pre)
+
 GEM
   remote: http://rubygems.org/
   specs:
+    activemodel (3.0.0)
+      activesupport (= 3.0.0)
+      builder (~> 2.1.2)
+      i18n (~> 0.4.1)
     activesupport (3.0.0)
-    bson (1.0.9)
+    bson (1.0.7)
     bson_ext (1.0.9)
+    builder (2.1.2)
     daemons (1.1.0)
-    durran-validatable (2.0.1)
     eventmachine (0.12.10)
     git (1.2.5)
     haml (3.0.18)
@@ -18,14 +33,8 @@ GEM
       mime-types
       treetop (>= 1.4.5)
     mime-types (1.16)
-    mongo (1.0.9)
-      bson (>= 1.0.5)
-    mongoid (1.9.1)
-      activesupport (<= 3.0.0)
-      bson (~> 1.0.1)
-      durran-validatable (>= 2.0.1)
-      mongo (~> 1.0.1)
-      will_paginate (< 2.9)
+    mongo (1.0.7)
+      bson (>= 1.0.4)
     padrino (0.9.15)
       padrino-admin (= 0.9.15)
       padrino-core (= 0.9.15)
@@ -68,9 +77,10 @@ GEM
     thor (0.14.1)
     treetop (1.4.8)
       polyglot (>= 0.3.1)
+    tzinfo (0.3.23)
     url_mount (0.2.1)
       rack
-    will_paginate (2.3.15)
+    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
@@ -78,7 +88,7 @@ PLATFORMS
 DEPENDENCIES
   bson_ext
   haml
-  mongoid
+  mongoid!
   padrino (= 0.9.15)
   rack-flash
   rack-test

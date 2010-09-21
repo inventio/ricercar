@@ -7,7 +7,7 @@ gem 'thin' # or mongrel
 
 # Component requirements
 gem 'haml'
-gem 'mongoid'
+gem 'mongoid', :git => "git://github.com/cherring/mongoid.git"
 gem 'bson_ext', :require => "mongo"
 
 # Test requirements
