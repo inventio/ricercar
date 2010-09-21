@@ -1,0 +1,7 @@
+--- 
+:script: jquery
+:renderer: haml
+:mock: none
+:test: shoulda
+:orm: mongoid
+:stylesheet: sass

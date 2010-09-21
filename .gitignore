@@ -1,0 +1,6 @@
+.bundle
+log
+tmp
+.DS_Store
+*.swp
+*~
