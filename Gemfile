@@ -52,7 +52,7 @@ gem 'grit', :git=>"git://github.com/mojombo/grit.git"
 gem 'formtastic', '~> 1.1.0'
 
 #for file uploads
-gem 'carrierwave'
+gem 'carrierwave', :git => 'git://github.com/jnicklas/carrierwave.git', :branch => 'master'
 
 #for authorization
 #gem 'aclatraz'

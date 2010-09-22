@@ -10,6 +10,14 @@ GIT
       will_paginate (~> 3.0.pre)
 
 GIT
+  remote: git://github.com/jnicklas/carrierwave.git
+  revision: 1003d62
+  branch: master
+  specs:
+    carrierwave (0.5.0.beta2)
+      activesupport (~> 3.0.0)
+
+GIT
   remote: git://github.com/mojombo/grit.git
   revision: 884a28c
   specs:
@@ -53,7 +61,6 @@ GEM
     bson (1.0.7)
     bson_ext (1.0.7)
     builder (2.1.2)
-    carrierwave (0.4.10)
     configuration (1.1.0)
     devise (1.1.2)
       bcrypt-ruby (~> 2.1.2)
@@ -122,7 +129,7 @@ PLATFORMS
 
 DEPENDENCIES
   bson_ext (= 1.0.7)
-  carrierwave
+  carrierwave!
   devise (= 1.1.2)
   formtastic (~> 1.1.0)
   grit!
