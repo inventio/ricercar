@@ -1,0 +1,10 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), scores_path
+  = link_to t('edit'), edit_score_path(@score)
+
+%dl
+  %dt= Score.human_attribute_name :title
+  %dd= @score.title
+  %dt= Score.human_attribute_name :type
+  %dd= @score.type

@@ -1,4 +1,6 @@
 Ricercar::Application.routes.draw do
+  resources :scores
+
   #get \"users\/show\"
 
   root :to => "home#index"
