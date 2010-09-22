@@ -9,6 +9,14 @@ GIT
       tzinfo (~> 0.3.22)
       will_paginate (~> 3.0.pre)
 
+GIT
+  remote: git://github.com/mojombo/grit.git
+  revision: 884a28c
+  specs:
+    grit (2.2.0)
+      diff-lcs (~> 1.1)
+      mime-types (~> 1.15)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -45,12 +53,18 @@ GEM
     bson (1.0.7)
     bson_ext (1.0.7)
     builder (2.1.2)
+    carrierwave (0.4.10)
     configuration (1.1.0)
     devise (1.1.2)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 0.10.7)
+    diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    formtastic (1.1.0)
+      actionpack (>= 2.3.0)
+      activesupport (>= 2.3.0)
+      i18n (>= 0.4.0)
     haml (3.0.18)
     heroku (1.10.2)
       json_pure (>= 1.2.0, < 1.5.0)
@@ -108,7 +122,10 @@ PLATFORMS
 
 DEPENDENCIES
   bson_ext (= 1.0.7)
+  carrierwave
   devise (= 1.1.2)
+  formtastic (~> 1.1.0)
+  grit!
   haml (= 3.0.18)
   heroku (= 1.10.2)
   hpricot (= 0.8.2)

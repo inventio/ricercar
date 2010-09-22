@@ -44,3 +44,15 @@ gem "bson_ext", "1.0.7"
 
 # Bundle gem needed for Devise
 gem "devise", "1.1.2"
+
+#For git interfacing
+gem 'grit', :git=>"git://github.com/mojombo/grit.git"
+
+#for forms
+gem 'formtastic', '~> 1.1.0'
+
+#for file uploads
+gem 'carrierwave'
+
+#for authorization
+#gem 'aclatraz'
